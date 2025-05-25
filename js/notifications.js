@@ -1,9 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
     // Sample notifications data
     const notifications = [
-        { id: 1, title: 'Upcoming meeting!', message: 'Team meeting starts in 15 minutes.', time: '10 minutes ago', read: false },
-        { id: 2, title: 'Task completed', message: 'You completed "Send weekly report"', time: '2 hours ago', read: true },
-        { id: 3, title: 'New message', message: 'You have a new message from Sarah', time: '5 hours ago', read: false }
+       
     ];
 
     // Initialize notifications

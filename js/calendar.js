@@ -84,3 +84,71 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
+
+
+function initCalendar() {
+    const today = new Date();
+    const currentMonth = today.getMonth();
+    const currentYear = today.getFullYear();
+    
+    // Update calendar header
+    const monthNames = ["January", "February", "March", "April", "May", "June",
+                        "July", "August", "September", "October", "November", "December"];
+    document.querySelector('.calendar-header h2').textContent = 
+        `${monthNames[currentMonth]} ${currentYear}`;
+    
+    // Generate calendar days
+    const daysContainer = document.querySelector('.calendar-days');
+    daysContainer.innerHTML = '';
+    
+    const firstDay = new Date(currentYear, currentMonth, 1);
+    const lastDay = new Date(currentYear, currentMonth + 1, 0);
+    
+    // Add empty cells for days before first day
+    for (let i = 0; i < firstDay.getDay(); i++) {
+        daysContainer.appendChild(document.createElement('div'));
+    }
+    
+    // Add days
+    for (let d = 1; d <= lastDay.getDate(); d++) {
+        const dayCell = document.createElement('div');
+        dayCell.className = 'calendar-day cursor-pointer hover:bg-gray-50 p-2';
+        dayCell.textContent = d;
+        
+        // Add click handler
+        dayCell.addEventListener('click', () => showTasksForDate(new Date(currentYear, currentMonth, d)));
+        
+        // Add today's date highlight
+        if (d === today.getDate() && currentMonth === today.getMonth()) {
+            dayCell.classList.add('bg-primary-100', 'font-medium');
+        }
+        
+        daysContainer.appendChild(dayCell);
+    }
+}
+
+function showTasksForDate(date) {
+    const tasksForDate = tasks.filter(task => {
+        const taskDate = new Date(task.date);
+        return taskDate.toDateString() === date.toDateString();
+    });
+    
+    // Sort by priority
+    tasksForDate.sort((a, b) => b.priority - a.priority);
+    
+    // Display tasks
+    const taskList = document.createElement('div');
+    taskList.className = 'space-y-2 mt-2';
+    
+    tasksForDate.forEach(task => {
+        const taskItem = document.createElement('div');
+        taskItem.className = `p-2 rounded ${getPriorityClass(task.priority)}`;
+        taskItem.textContent = task.title;
+        taskList.appendChild(taskItem);
+    });
+    
+    // Show in modal or side panel
+    const taskDisplay = document.getElementById('task-display');
+    taskDisplay.innerHTML = '';
+    taskDisplay.appendChild(taskList);
+}
