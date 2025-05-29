@@ -92,7 +92,7 @@
                         <div>
                             <button @click="open = !open" class="flex text-sm rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500" id="user-menu" aria-expanded="false" aria-haspopup="true">
                                 <span class="sr-only">Open user menu</span>
-                                <img class="h-8 w-8 rounded-full" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="">
+                                <img class="h-8 w-8 rounded-full" src="https://img.freepik.com/premium-vector/avatar-profile-icon-flat-style-male-user-profile-vector-illustration-isolated-background-man-profile-sign-business-concept_157943-38764.jpg?semt=ais_hybrid&w=740" alt="">
                             </button>
                         </div>
 
@@ -127,8 +127,8 @@
                         <img class="h-10 w-10 rounded-full" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="">
                     </div>
                     <div class="ml-3">
-                        <div class="text-base font-medium text-gray-800">Tom Cook</div>
-                        <div class="text-sm font-medium text-gray-500">tom@example.com</div>
+                        <!-- <div class="text-base font-medium text-gray-800">Tom Cook</div>
+                        <div class="text-sm font-medium text-gray-500"></div> -->
                     </div>
                     <button class="ml-auto flex-shrink-0 bg-white p-1 rounded-full text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500">
                         <span class="sr-only">View notifications</span>
@@ -150,7 +150,7 @@
         <div class="bg-gradient-to-r from-primary-500 to-secondary-600 rounded-xl shadow-lg overflow-hidden mb-8 animate__animated animate__fadeIn">
             <div class="p-6 md:p-8 lg:p-10 flex flex-col md:flex-row items-center justify-between">
                 <div class="mb-6 md:mb-0">
-                    <h1 class="text-3xl md:text-4xl font-bold text-white mb-2">Welcome back, Tom!</h1>
+                    <h1 class="text-3xl md:text-4xl font-bold text-white mb-2">Welcome back</h1>
                     <p class="text-primary-100 text-lg">You have 5 tasks to complete today. Let's make it productive!</p>
                 </div>
                 <div class="relative animate-float">
@@ -203,175 +203,9 @@
                 </div>
             </div>
 
-            <!-- Calendar -->
-            <!-- <div class="bg-white rounded-xl shadow-md overflow-hidden animate__animated animate__fadeIn">
-                <div class="p-6">
-                    <div class="flex items-center justify-between mb-4">
-                        <h2 class="text-xl font-semibold text-gray-800">Calendar</h2>
-                        <div class="flex space-x-2">
-                            <button class="p-1 rounded-full hover:bg-gray-100" title="Previous month"></button>
-                                <i class="fas fa-chevron-left text-gray-500"></i>
-                            </button>
-                            <span class="text-sm font-medium text-gray-700">May 2023</span>
-                            <button class="p-1 rounded-full hover:bg-gray-100" title="Next month"></button>
-                                <i class="fas fa-chevron-right text-gray-500"></i>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="grid grid-cols-7 gap-1 mb-2">
-                        <div class="text-center text-xs font-medium text-gray-500">Sun</div>
-                        <div class="text-center text-xs font-medium text-gray-500">Mon</div>
-                        <div class="text-center text-xs font-medium text-gray-500">Tue</div>
-                        <div class="text-center text-xs font-medium text-gray-500">Wed</div>
-                        <div class="text-center text-xs font-medium text-gray-500">Thu</div>
-                        <div class="text-center text-xs font-medium text-gray-500">Fri</div>
-                        <div class="text-center text-xs font-medium text-gray-500">Sat</div>
-                    </div>
-                    <div class="grid grid-cols-7 gap-1">
-                        <div class="h-8"></div>
-                        <div class="h-8"></div>
-                        <div class="h-8"></div>
-                        <div class="h-8 flex items-center justify-center">
-                            <span class="w-6 h-6 flex items-center justify-center text-xs">1</span>
-                        </div>
-                        <div class="h-8 flex items-center justify-center">
-                            <span class="w-6 h-6 flex items-center justify-center text-xs">2</span>
-                        </div>
-                        <div class="h-8 flex items-center justify-center">
-                            <span class="w-6 h-6 flex items-center justify-center text-xs">3</span>
-                        </div>
-                        <div class="h-8 flex items-center justify-center">
-                            <span class="w-6 h-6 flex items-center justify-center text-xs">4</span>
-                        </div>
-                        <div class="h-8 flex items-center justify-center">
-                            <span class="w-6 h-6 flex items-center justify-center rounded-full bg-primary-100 text-primary-800 text-xs font-medium">5</span>
-                        </div>
-                        <div class="h-8 flex items-center justify-center">
-                            <span class="w-6 h-6 flex items-center justify-center text-xs">6</span>
-                        </div>
-                        <div class="h-8 flex items-center justify-center">
-                            <span class="w-6 h-6 flex items-center justify-center text-xs">7</span>
-                        </div>
-                        <div class="h-8 flex items-center justify-center">
-                            <span class="w-6 h-6 flex items-center justify-center text-xs">8</span>
-                        </div>
-                        <div class="h-8 flex items-center justify-center">
-                            <span class="w-6 h-6 flex items-center justify-center">9</span>
-                        </div>
-                        <div class="h-8 flex items-center justify-center">
-                            <span class="w-6 h-6 flex items-center justify-center text-xs">10</span>
-                        </div>
-                        <div class="h-8 flex items-center justify-center">
-                            <span class="w-6 h-6 flex items-center justify-center text-xs">11</span>
-                        </div>
-                        <div class="h-8 flex items-center justify-center">
-                            <span class="w-6 h-6 flex items-center justify-center text-xs">12</span>
-                        </div>
-                        <div class="h-8 flex items-center justify-center">
-                            <span class="w-6 h-6 flex items-center justify-center text-xs">13</span>
-                        </div>
-                        <div class="h-8 flex items-center justify-center">
-                            <span class="w-6 h-6 flex items-center justify-center text-xs">14</span>
-                        </div>
-                        <div class="h-8 flex items-center justify-center">
-                            <span class="w-6 h-6 flex items-center justify-center text-xs">15</span>
-                        </div>
-                        <div class="h-8 flex items-center justify-center">
-                            <span class="w-6 h-6 flex items-center justify-center text-xs">16</span>
-                        </div>
-                        <div class="h-8 flex items-center justify-center">
-                            <span class="w-6 h-6 flex items-center justify-center text-xs">17</span>
-                        </div>
-                        <div class="h-8 flex items-center justify-center">
-                            <span class="w-6 h-6 flex items-center justify-center text-xs">18</span>
-                        </div>
-                        <div class="h-8 flex items-center justify-center">
-                            <span class="w-6 h-6 flex items-center justify-center text-xs">19</span>
-                        </div>
-                        <div class="h-8 flex items-center justify-center">
-                            <span class="w-6 h-6 flex items-center justify-center text-xs">20</span>
-                        </div>
-                        <div class="h-8 flex items-center justify-center">
-                            <span class="w-6 h-6 flex items-center justify-center text-xs">21</span>
-                        </div>
-                        <div class="h-8 flex items-center justify-center">
-                            <span class="w-6 h-6 flex items-center justify-center text-xs">22</span>
-                        </div>
-                        <div class="h-8 flex items-center justify-center">
-                            <span class="w-6 h-6 flex items-center justify-center text-xs">23</span>
-                        </div>
-                        <div class="h-8 flex items-center justify-center">
-                            <span class="w-6 h-6 flex items-center justify-center text-xs">24</span>
-                        </div>
-                        <div class="h-8 flex items-center justify-center">
-                            <span class="w-6 h-6 flex items-center justify-center text-xs">25</span>
-                        </div>
-                        <div class="h-8 flex items-center justify-center">
-                            <span class="w-6 h-6 flex items-center justify-center text-xs">26</span>
-                        </div>
-                        <div class="h-8 flex items-center justify-center">
-                            <span class="w-6 h-6 flex items-center justify-center text-xs">27</span>
-                        </div>
-                        <div class="h-8 flex items-center justify-center">
-                            <span class="w-6 h-6 flex items-center justify-center text-xs">28</span>
-                        </div>
-                        <div class="h-8 flex items-center justify-center">
-                            <span class="w-6 h-6 flex items-center justify-center text-xs">29</span>
-                        </div>
-                        <div class="h-8 flex items-center justify-center">
-                            <span class="w-6 h-6 flex items-center justify-center text-xs">30</span>
-                        </div>
-                        <div class="h-8 flex items-center justify-center">
-                            <span class="w-6 h-6 flex items-center justify-center text-xs">31</span>
-                        </div>
-                    </div>
-                </div>
-            </div> -->
-
-            <!-- Quick Actions -->
-            <!-- <div class="bg-white rounded-xl shadow-md overflow-hidden animate__animated animate__fadeInRight">
-                <div class="p-6">
-                    <h2 class="text-xl font-semibold text-gray-800 mb-4">Quick Actions</h2>
-                    <div class="space-y-3">
-                        <button class="w-full flex items-center justify-between p-3 rounded-lg bg-primary-50 hover:bg-primary-100 transition-colors duration-200">
-                            <div class="flex items-center">
-                                <div class="p-2 rounded-full bg-primary-100 text-primary-600 mr-3">
-                                    <i class="fas fa-plus"></i>
-                                </div>
-                                <span class="text-sm font-medium text-gray-800">Add New Task</span>
-                            </div>
-                            <i class="fas fa-chevron-right text-gray-400"></i>
-                        </button>
-                        <button class="w-full flex items-center justify-between p-3 rounded-lg bg-secondary-50 hover:bg-secondary-100 transition-colors duration-200">
-                            <div class="flex items-center">
-                                <div class="p-2 rounded-full bg-secondary-100 text-secondary-600 mr-3">
-                                    <i class="fas fa-calendar-plus"></i>
-                                </div>
-                                <span class="text-sm font-medium text-gray-800">Schedule Event</span>
-                            </div>
-                            <i class="fas fa-chevron-right text-gray-400"></i>
-                        </button>
-                        <button class="w-full flex items-center justify-between p-3 rounded-lg bg-yellow-50 hover:bg-yellow-100 transition-colors duration-200">
-                            <div class="flex items-center">
-                                <div class="p-2 rounded-full bg-yellow-100 text-yellow-600 mr-3">
-                                    <i class="fas fa-bell"></i>
-                                </div>
-                                <span class="text-sm font-medium text-gray-800">Set Reminder</span>
-                            </div>
-                            <i class="fas fa-chevron-right text-gray-400"></i>
-                        </button>
-                        <button class="w-full flex items-center justify-between p-3 rounded-lg bg-green-50 hover:bg-green-100 transition-colors duration-200">
-                            <div class="flex items-center">
-                                <div class="p-2 rounded-full bg-green-100 text-green-600 mr-3">
-                                    <i class="fas fa-share-alt"></i>
-                                </div>
-                                <span class="text-sm font-medium text-gray-800">Share Task</span>
-                            </div>
-                            <i class="fas fa-chevron-right text-gray-400"></i>
-                        </button>
-                    </div>
-                </div>
-            </div> -->
+           
+                
+            </div> 
         </div>
 
         <!-- Recent Activities -->
@@ -416,7 +250,7 @@
                 </div>
                 <div class="mt-8 md:mt-0 md:order-1">
                     <p class="text-center text-base text-gray-400">
-                        &copy; 2023 DailyFlow. All rights reserved.
+                        &copy; 2025 DailyFlow. All rights reserved.
                     </p>
                 </div>
             </div>
